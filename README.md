@@ -3,16 +3,20 @@
 cd ~/ros2_ws/src
 ros2 pkg create --build-type ament_python up_mover --dependencies rclpy geometry_msgs
 
+
 **Membuat file node**
 
 cd ~/ros2_ws/src/up_mover/up_mover
 touch mover_node.py
 
+
 **Penyesuaian file setup.py**
 
 'mover_node = up_mover.mover_node:main'
 
+
 **Build Project**
+
 cd ~/ros2_ws
 colcon build
 source ~/.bashrc
