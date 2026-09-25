@@ -21,34 +21,42 @@ class MoverNode(Node):
             msg.linear.x = 0.5   # Kecepatan linear (m/s)
             msg.angular.z = 0.0
             self.get_logger().info('Gerak Maju Kedepan...')
-		elif elapsed_time < 7.0:
+			
+		elif elapsed_time < 2.0:
 			msg.linear.x = 0.0
 			msg.angular.z = 0.5 # Kecepatan rotasi (rad/s)
 			self.get_logger().info('Belok...')
-		elif elapsed_time < 12.0:
+			
+		elif elapsed_time < 9.0:
             msg.linear.x = 0.5   # Kecepatan linear (m/s)
             msg.angular.z = 0.0
             self.get_logger().info('Gerak Maju Kekiri...')
-        elif elapsed_time < 14.0:
+			
+        elif elapsed_time < 11.0:
             msg.linear.x = 0.0
             msg.angular.z = 0.5  # Kecepatan rotasi (rad/s)
             self.get_logger().info('Belok...')
-		elif elapsed_time < 16.0:
+			
+		elif elapsed_time < 13.0:
             msg.linear.x = 0.5   # Kecepatan linear (m/s)
             msg.angular.z = 0.0
             self.get_logger().info('Gerak Maju Kebawah...')
-		elif elapsed_time < 21.0:
+			
+		elif elapsed_time < 18.0:
             msg.linear.x = 0.0
             msg.angular.z = 0.5  # Kecepatan rotasi (rad/s)
             self.get_logger().info('Belok...')
-		elif elapsed_time < 26.0:
+			
+		elif elapsed_time < 20.0:
             msg.linear.x = 0.5   # Kecepatan linear (m/s)
             msg.angular.z = 0.0
             self.get_logger().info('Gerak Maju Kekanan...')
-		elif elapsed_time < 31.0:
+			
+		elif elapsed_time < 22.0:
             msg.linear.x = 0.0
             msg.angular.z = 0.5  # Kecepatan rotasi (rad/s)
             self.get_logger().info('Belok...')
+			
         else:
             msg.linear.x = 0.0
             msg.angular.z = 0.0
@@ -64,6 +72,7 @@ class MoverNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = MoverNode()
+	
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
