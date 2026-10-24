@@ -5,6 +5,7 @@ from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 
 
+
 # Jalur labirin berdasarkan koordinat yang diberikan
 LEFT_TRACK = [
     (0.80, 2.50),
@@ -13,8 +14,8 @@ LEFT_TRACK = [
     (3.40, 3.30),
     (3.20, 0.85),
     (7.20, 1.00),
-    (7.00, 6.00),
-    (7.00, 6.80),
+    (7.10, 6.00),
+    (6.80, 6.80),
     (6.70, 7.25),
     (6.35, 7.50),
     (5.61, 7.15),
@@ -56,7 +57,7 @@ class MazeSolver(Node):
         # Parameter gerakan
         self.tolerance = 0.12
         self.max_speed = 0.50
-        self.max_angular = 1.2
+        self.max_angular = 1.5
         self.k_linear = 1.2
         self.k_angular = 2.2
 
