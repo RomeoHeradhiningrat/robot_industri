@@ -70,7 +70,7 @@ class Odometry:
         if dt <= 0.0 or self.n == 0:
             return
         phi_l = self.sum_l / self.n
-        phi_r = self.sum_r / self.n
+        phi_r = self._sum_r / self.n
         self._clear()
         self._last_time = now
         if dt > 0.5:
