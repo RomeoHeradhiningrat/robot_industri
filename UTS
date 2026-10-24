@@ -132,7 +132,7 @@ class MazeSolver(Node):
         cmd = Twist()
 
         # Putar dahulu jika arah robot terlalu melenceng
-        if abs(yaw_error) > 0.05:
+        if abs(yaw_error) > 0.20:
             cmd.linear.x = 0.0
             cmd.angular.z = max(
                 -self.max_angular,
