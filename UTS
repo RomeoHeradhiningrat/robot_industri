@@ -7,8 +7,8 @@ from nav_msgs.msg import Odometry
 
 # Jalur labirin berdasarkan koordinat yang diberikan
 LEFT_TRACK = [
-    (1.00, 2.40),
-    (2.35, 2.40),
+    (1.00, 2.50),
+    (2.35, 2.50),
     (2.35, 3.04),
     (3.40, 3.04),
     (3.40, 0.79),
