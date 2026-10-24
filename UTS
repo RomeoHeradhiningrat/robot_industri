@@ -59,10 +59,10 @@ class MazeSolver(Node):
 
         # Parameter gerakan
         self.tolerance = 0.12
-        self.max_speed = 0.16
-        self.max_angular = 0.8
-        self.k_linear = 0.8
-        self.k_angular = 1.8
+        self.max_speed = 0.25
+        self.max_angular = 1.2
+        self.k_linear = 1.2
+        self.k_angular = 2.2
 
         self.timer = self.create_timer(
             0.05, self.control_loop
